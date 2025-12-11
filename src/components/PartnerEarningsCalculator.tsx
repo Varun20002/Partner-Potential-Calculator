@@ -79,10 +79,6 @@ export default function PartnerEarningsCalculator() {
     [avgInvestment, commissionRate, pendingUsers],
   )
 
-  const minProjection = useMemo(
-    () => pendingUsers * avgInvestment * 0.2,
-    [avgInvestment, pendingUsers],
-  )
   const maxProjection = useMemo(
     () => (pendingUsers * 1.5) * avgInvestment * (commissionRate / 100),
     [pendingUsers, avgInvestment, commissionRate],
