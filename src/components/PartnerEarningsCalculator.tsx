@@ -19,7 +19,7 @@ const ACCENT_RED = '#EB5B3C'
 const GREY = '#E5E7EB'
 
 const whatsappLink =
-  'https://wa.me/1234567890?text=I%20want%20to%20convert%20my%20potential%20customers'
+  'https://wa.me/7718826847?text=I%20want%20to%20convert%20my%20potential%20customers'
 
 const formatCurrency = (value: number) =>
   new Intl.NumberFormat('en-IN', {
@@ -347,7 +347,7 @@ export default function PartnerEarningsCalculator() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <InputLabel label="Total Historical Earnings">
+              <InputLabel label="All Time Earnings">
                 <input
                   type="number"
                   min={0}
