@@ -16,7 +16,7 @@ import { Calculator, MessageCircle, X } from 'lucide-react'
 
 const PRIMARY_GREEN = '#00D09C'
 const ACCENT_RED = '#EB5B3C'
-const GREY = '#E5E7EB'
+const PRIMARY_BLUE = '#3b82f6'
 
 const whatsappLink =
   'https://wa.me/7718826847?text=I%20want%20to%20convert%20my%20potential%20customers'
@@ -126,7 +126,7 @@ export default function PartnerEarningsCalculator() {
     {
       name: `Projected (${Math.ceil(pendingUsers * 1.5)})`,
       value: maxProjection,
-      fill: GREY,
+      fill: PRIMARY_BLUE,
     },
   ]
 
@@ -271,7 +271,11 @@ export default function PartnerEarningsCalculator() {
                         </Pie>
                       </PieChart>
                     ) : (
-                      <BarChart data={barData} barSize={40}>
+                      <BarChart
+                        data={barData}
+                        barSize={40}
+                        margin={{ top: 20, right: 0, left: 0, bottom: 0 }}
+                      >
                         <CartesianGrid vertical={false} strokeDasharray="3 3" />
                         <XAxis
                           dataKey="name"
@@ -286,6 +290,7 @@ export default function PartnerEarningsCalculator() {
                           tick={{ fill: '#6B7280', fontSize: 12 }}
                         />
                         <Tooltip
+                          cursor={false}
                           formatter={(value: unknown) =>
                             formatCurrency(toNumber(value))
                           }
